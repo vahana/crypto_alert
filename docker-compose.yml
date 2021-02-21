@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  coin_alert:
+    build: .
+    environment:
+      BINANCE_API_URL: https://testnet.binance.vision/api
+      BINANCE_API_KEY: "insert binance api key here"
+      BINANCE_SECRET_KEY: "insert binance secret key here"
+      TICKERS: <ticker>,<ticker>...
+      PRICE_ALERTS: <ticker>:<price>,<ticker>:<price>...
+      DATA_PATH: '/data'
+    volumes:
+      - ./data:/data
